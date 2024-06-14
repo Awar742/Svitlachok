@@ -15,13 +15,7 @@ public class SvitlachokApplication {
 		SpringApplication.run(SvitlachokApplication.class, args);
 
 		PostRequest.postRequest();
-//        System.out.println(ColorCounter.queueCounter());
-//        System.out.println();
-//
-//		int [] todaySchedule=ColorCounter.colorCounter();
-//		for (int j = 0; j < todaySchedule.length; j++) {
-//			System.out.print(todaySchedule[j]+" ");
-//		}
+
 	}
 
 }
