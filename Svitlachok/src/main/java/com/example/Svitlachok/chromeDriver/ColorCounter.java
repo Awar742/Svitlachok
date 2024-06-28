@@ -12,7 +12,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class ColorCounter {
-    public static int queueCounter(){
+    public static int queueCounter(String personal_account){
         System.setProperty("webdriver.chrome.driver", "C:\\Windows\\chromedriver.exe");
 
 
@@ -30,7 +30,7 @@ public class ColorCounter {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement inputField = wait.until(ExpectedConditions.elementToBeClickable(By.id("searchAccountNumber")));
 
-            inputField.sendKeys("24045709");
+            inputField.sendKeys(personal_account);
 
             WebElement submitButton = driver.findElement(By.id("accountNumberReport"));
             submitButton.click();
@@ -47,7 +47,7 @@ public class ColorCounter {
 
         return numberOfSchedule;
     }
-    public static int[] colorCounter() {
+    public static int[] colorCounter(String personal_account) {
 
         System.setProperty("webdriver.chrome.driver", "C:\\Windows\\chromedriver.exe");
 
@@ -68,7 +68,7 @@ public class ColorCounter {
             WebElement inputField = wait.until(ExpectedConditions.elementToBeClickable(By.id("searchAccountNumber")));
 
 
-            inputField.sendKeys("24045709");
+            inputField.sendKeys(personal_account);
 
 
             WebElement submitButton = driver.findElement(By.id("accountNumberReport"));
